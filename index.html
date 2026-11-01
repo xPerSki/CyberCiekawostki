@@ -24,248 +24,284 @@
             document.documentElement.dataset.theme = theme;
         })();
     </script>
+    <script src="js/data.js" defer></script>
     <script src="js/app.js" defer></script>
+    <script src="js/quiz.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Przejdź do treści</a>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
 
-<header class="header">
-    <nav class="navbar container" aria-label="Główna nawigacja">
-        <a class="logo" href="#start">
-            <svg class="logo-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 L20 5 V11 C20 16.5 16.7 20.4 12 22 C7.3 20.4 4 16.5 4 11 V5 Z" fill="currentColor" /></svg>
-            <span class="logo-name">Cyber<b>Ciekawostki</b></span>
-        </a>
-        <ul class="menu" id="mainMenu">
-            <li><a href="#start">Start</a></li>
-            <li><a href="#ciekawostki">Ciekawostki</a></li>
-            <li><a href="#kryptografia">Kryptografia</a></li>
-            <li><a href="#fiszki">Fiszki</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-        <div class="actions">
-            <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Włącz tryb ciemny">
-                <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor" /></svg>
-                <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="currentColor" /><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7"/></g></svg>
-            </button>
-            <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="mainMenu" aria-label="Otwórz menu">
-                <span class="line" aria-hidden="true"></span>
-                <span class="line" aria-hidden="true"></span>
-                <span class="line" aria-hidden="true"></span>
-            </button>
-        </div>
-    </nav>
-</header>
+    <header class="header">
+        <nav class="navbar container" aria-label="Główna nawigacja">
+            <a class="logo" href="#start">
+                <svg class="logo-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 L20 5 V11 C20 16.5 16.7 20.4 12 22 C7.3 20.4 4 16.5 4 11 V5 Z" fill="currentColor" /></svg>
+                <span class="logo-name">Cyber<b>Ciekawostki</b></span>
+            </a>
+            <ul class="menu" id="mainMenu">
+                <li><a href="#start">Start</a></li>
+                <li><a href="#ciekawostki">Ciekawostki</a></li>
+                <li><a href="#kryptografia">Kryptografia</a></li>
+                <li><a href="#fiszki">Fiszki</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-pressed="false" aria-label="Włącz tryb ciemny">
+                    <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor" /></svg>
+                    <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="currentColor" /><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7"/></g></svg>
+                </button>
+                <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="mainMenu" aria-label="Otwórz menu">
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+                    <span class="line" aria-hidden="true"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-<main id="main">
-    <section id="start" class="hero" aria-labelledby="hero-title">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <p class="badge badge-hero">Bez uprzedniej wiedzy</p>
-                <h1 id="hero-title">Ciekawostki o <span class="highlight">cyberbezpieczeństwie</span> i kryptografii</h1>
-                <p class="hero-desc">Krótkie historie o hakerach, szyfrach i zabezpieczeniach. Do tego fiszki, quiz i odpowiedzi na najczęstsze pytania. Wystarczy chwila, żeby czegoś się dowiedzieć.</p>
-                <div class="hero-buttons">
-                    <a class="btn" href="#fiszki">Zobacz fiszki</a>
-                    <a class="btn btn-secondary" href="#quiz">Zrób quiz</a>
+    <main id="main">
+        <section id="start" class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="badge badge-hero">Bez uprzedniej wiedzy</p>
+                    <h1 id="hero-title">Ciekawostki o <span class="highlight">cyberbezpieczeństwie</span> i kryptografii</h1>
+                    <p class="hero-desc">Krótkie historie o hakerach, szyfrach i zabezpieczeniach. Do tego fiszki, quiz i odpowiedzi na najczęstsze pytania. Wystarczy chwila, żeby czegoś się dowiedzieć.</p>
+                    <div class="hero-buttons">
+                        <a class="btn" href="#fiszki">Zobacz fiszki</a>
+                        <a class="btn btn-secondary" href="#quiz">Zrób quiz</a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat"><span class="number">12</span><span class="desc">ciekawostek</span></div>
+                        <div class="stat"><span class="number">12</span><span class="desc">fiszek</span></div>
+                        <div class="stat"><span class="number">5</span><span class="desc">pytań w quizie</span></div>
+                    </div>
                 </div>
-                <div class="stats">
-                    <div class="stat"><span class="number">12</span><span class="desc">ciekawostek</span></div>
-                    <div class="stat"><span class="number">12</span><span class="desc">fiszek</span></div>
-                    <div class="stat"><span class="number">5</span><span class="desc">pytań w quizie</span></div>
+                <div class="hero-image">
+                    <img src="images/hero.svg" alt="Tarcza z kłódką" width="440" height="440" />
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero.svg" alt="Tarcza z kłódką" width="440" height="440" />
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="ciekawostki" class="section" aria-labelledby="ciekawostki-tytul">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge">Ciekawostki</span>
-                <h2 id="ciekawostki-tytul">Ciekawostki ze świata cyberbezpieczeństwa</h2>
-                <p class="section-desc">Krótko o tym, jak działają oszuści i hakerzy, oraz o prawdziwych atakach z przeszłości.</p>
-            </div>
-            <div class="grid">
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">01</span>
-                    <span class="card-icon" aria-hidden="true">🔑</span>
-                    <h3>„123456” od lat na szczycie</h3>
-                    <p>W zestawieniach najpopularniejszych haseł z wycieków danych „123456” pojawia się co roku. Takie hasło program odgadnie w ułamku sekundy.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">02</span>
-                    <span class="card-icon" aria-hidden="true">🎣</span>
-                    <h3>Phishing to „łowienie” danych</h3>
-                    <p>Nazwa pochodzi od angielskiego <em>fishing</em>, czyli łowienia ryb. Oszuści zarzucają przynętę, np. fałszywą wiadomość, i czekają, aż ktoś poda swoje dane.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">03</span>
-                    <span class="card-icon" aria-hidden="true">🎲</span>
-                    <h3>Długie hasło wygrywa ze skomplikowanym</h3>
-                    <p>Autor komiksu xkcd pokazał w 2011 roku, że cztery losowe, zwykłe słowa, np. <em>kot-rower-zupa-lampa</em>, są trudniejsze do złamania niż krótkie hasło pełne znaków specjalnych. Dodatkowo łatwiej je zapamiętać.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">04</span>
-                    <span class="card-icon" aria-hidden="true">💌</span>
-                    <h3>ILOVEYOU</h3>
-                    <p>E-mail z „wyznaniem miłosnym” miał załącznik, który wyglądał jak zwykły plik tekstowy, a w rzeczywistości był programem. Po otwarciu rozsyłał się dalej do kontaktów ofiary. W kilka dni zainfekował miliony komputerów, a straty szacowano na miliardy dolarów.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">05</span>
-                    <span class="card-icon" aria-hidden="true">🔒</span>
-                    <h3>WannaCry</h3>
-                    <p>Ten ransomware szyfrował pliki i żądał okupu w kryptowalucie. Zaatakował około 200 tysięcy komputerów w ponad 150 krajach, także szpitale w Wielkiej Brytanii. Rozprzestrzeniał się przez luki w niezaktualizowanym systemie Windows.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">06</span>
-                    <span class="card-icon" aria-hidden="true">🕳️</span>
-                    <h3>Deep web to nie dark web</h3>
-                    <p>Deep web to wszystko, czego nie indeksują wyszukiwarki, np. poczta czy konto bankowe. Dark web to jego niewielka, celowo ukryta część, dostępna przez Tor i adresy .onion</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">07</span>
-                    <span class="card-icon" aria-hidden="true">🪙</span>
-                    <h3>Darmowa usługa nie zawsze jest darmowa</h3>
-                    <p>Wiele darmowych serwisów zarabia na reklamach dopasowanych do tego, co wiedzą o użytkowniku. Dlatego warto czasem sprawdzić ustawienia prywatności.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">08</span>
-                    <span class="card-icon" aria-hidden="true">🧠</span>
-                    <h3>Najsłabszym ogniwem jest człowiek</h3>
-                    <p>Wiele ataków zaczyna się od jednej wiadomości i jednego kliknięcia. To tak zwana inżynieria społeczna: oszuści wykorzystują pośpiech, ciekawość i strach. Zanim klikniesz, zatrzymaj się na chwilę.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="kryptografia" class="section section-alt" aria-labelledby="kryptografia-tytul">
-        <div class="container">
-            <div class="crypto-intro reveal">
-                <div>
-                    <span class="badge badge-mint">Kryptografia</span>
-                    <h2 id="kryptografia-tytul">Szyfry mają ponad 2000 lat</h2>
-                    <p class="section-desc">Kryptografia zajmuje się ukrywaniem treści wiadomości, od listów wojennych po dzisiejsze zakupy w internecie. Oto kilka ciekawych momentów z jej historii:</p>
+        <section id="ciekawostki" class="section" aria-labelledby="ciekawostki-tytul">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="badge">Ciekawostki</span>
+                    <h2 id="ciekawostki-tytul">Ciekawostki ze świata cyberbezpieczeństwa</h2>
+                    <p class="section-desc">Krótko o tym, jak działają oszuści i hakerzy, oraz o prawdziwych atakach z przeszłości.</p>
                 </div>
-                <img src="images/szyfry.svg" alt="Szyfr Cezara" width="440" height="314" class="reveal" />
-            </div>
-            <div class="grid">
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">01</span>
-                    <h3>Szyfr Cezara</h3>
-                    <p>Juliusz Cezar przesuwał każdą literę o trzy miejsca w alfabecie: A zmienia się w D, B w E, a słowo ZASADA w CDVDGD. Dziś taki szyfr da się złamać w kilka minut, bo wystarczy sprawdzić wszystkie możliwe przesunięcia.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">02</span>
-                    <h3>Szyfr Vigenère’a</h3>
-                    <p>Przez ponad 300 lat uważano go za niemożliwy do złamania. Dopiero w 1863 roku Friedrich Kasiski opisał sposób na jego złamanie: wystarczyło znaleźć powtarzające się fragmenty zaszyfrowanego tekstu.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">03</span>
-                    <h3>Enigma i polscy matematycy</h3>
-                    <p>Marian Rejewski, Jerzy Różycki i Henryk Zygalski złamali szyfr niemieckiej maszyny Enigma w 1932 roku. W 1939 roku przekazali swoją wiedzę Francuzom i Brytyjczykom, co bardzo pomogło w późniejszych pracach w Bletchley Park.</p>
-                </article>
-                <article class="card reveal">
-                    <span class="card-num" aria-hidden="true">04</span>
-                    <h3>Maria Stuart i tajne listy</h3>
-                    <p>Szkocka królowa wysyłała zaszyfrowane listy do swoich zwolenników. Ludzie angielskiej królowej Elżbiety I złamali szyfr i odczytali je. Listy były ważnym dowodem w jej procesie, a w 1587 roku Maria została stracona.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="fiszki" class="section" aria-labelledby="fiszki-tytul">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge badge-red">Fiszki</span>
-                <h2 id="fiszki-tytul">Fiszki: odwróć i sprawdź, co wiesz</h2>
-                <p class="section-desc">Kliknij fiszkę, żeby zobaczyć odpowiedź. Kolejność jest losowa, a przyciskiem „Tasuj” możesz ją zmienić.</p>
-            </div>
-            <noscript><p class="info-box">Fiszki wymagają skryptów JavaScript.</p></noscript>
-            <div class="flashcard-box reveal">
-                <div class="flashcard-stage">
-                    <button class="flashcard" id="flashcard" type="button" aria-label="Odwróć fiszkę, aby zobaczyć odpowiedź">
-              <span class="flashcard-inner">
-                <span class="flashcard-side front">
-                  <span class="flashcard-category" id="flashcardCategory">—</span>
-                  <span class="flashcard-question" id="flashcardQuestion">—</span>
-                  <span class="flashcard-hint" aria-hidden="true">Kliknij, aby odwrócić ↻</span>
-                </span>
-                <span class="flashcard-side back">
-                  <span class="flashcard-category">Odpowiedź</span>
-                  <span class="flashcard-answer" id="flashcardAnswer">—</span>
-                </span>
-              </span>
-                    </button>
+                <div class="grid">
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">01</span>
+                        <span class="card-icon" aria-hidden="true">🔑</span>
+                        <h3>„123456” od lat na szczycie</h3>
+                        <p>W zestawieniach najpopularniejszych haseł z wycieków danych „123456” pojawia się co roku. Takie hasło program odgadnie w ułamku sekundy.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">02</span>
+                        <span class="card-icon" aria-hidden="true">🎣</span>
+                        <h3>Phishing to „łowienie” danych</h3>
+                        <p>Nazwa pochodzi od angielskiego <em>fishing</em>, czyli łowienia ryb. Oszuści zarzucają przynętę, np. fałszywą wiadomość, i czekają, aż ktoś poda swoje dane.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">03</span>
+                        <span class="card-icon" aria-hidden="true">🎲</span>
+                        <h3>Długie hasło wygrywa ze skomplikowanym</h3>
+                        <p>Autor komiksu xkcd pokazał w 2011 roku, że cztery losowe, zwykłe słowa, np. <em>kot-rower-zupa-lampa</em>, są trudniejsze do złamania niż krótkie hasło pełne znaków specjalnych. Dodatkowo łatwiej je zapamiętać.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">04</span>
+                        <span class="card-icon" aria-hidden="true">💌</span>
+                        <h3>ILOVEYOU</h3>
+                        <p>E-mail z „wyznaniem miłosnym” miał załącznik, który wyglądał jak zwykły plik tekstowy, a w rzeczywistości był programem. Po otwarciu rozsyłał się dalej do kontaktów ofiary. W kilka dni zainfekował miliony komputerów, a straty szacowano na miliardy dolarów.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">05</span>
+                        <span class="card-icon" aria-hidden="true">🔒</span>
+                        <h3>WannaCry</h3>
+                        <p>Ten ransomware szyfrował pliki i żądał okupu w kryptowalucie. Zaatakował około 200 tysięcy komputerów w ponad 150 krajach, także szpitale w Wielkiej Brytanii. Rozprzestrzeniał się przez luki w niezaktualizowanym systemie Windows.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">06</span>
+                        <span class="card-icon" aria-hidden="true">🕳️</span>
+                        <h3>Deep web to nie dark web</h3>
+                        <p>Deep web to wszystko, czego nie indeksują wyszukiwarki, np. poczta czy konto bankowe. Dark web to jego niewielka, celowo ukryta część, dostępna przez Tor i adresy .onion</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">07</span>
+                        <span class="card-icon" aria-hidden="true">🪙</span>
+                        <h3>Darmowa usługa nie zawsze jest darmowa</h3>
+                        <p>Wiele darmowych serwisów zarabia na reklamach dopasowanych do tego, co wiedzą o użytkowniku. Dlatego warto czasem sprawdzić ustawienia prywatności.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">08</span>
+                        <span class="card-icon" aria-hidden="true">🧠</span>
+                        <h3>Najsłabszym ogniwem jest człowiek</h3>
+                        <p>Wiele ataków zaczyna się od jednej wiadomości i jednego kliknięcia. To tak zwana inżynieria społeczna: oszuści wykorzystują pośpiech, ciekawość i strach. Zanim klikniesz, zatrzymaj się na chwilę.</p>
+                    </article>
                 </div>
-                <div class="flashcard-panel">
-                    <p class="flashcard-counter" id="flashcardCounter" aria-live="polite">Fiszka 1 z 12</p>
-                    <div class="flashcard-buttons">
-                        <button class="btn btn-small" id="flashcardPrev" type="button">← Poprzednia</button>
-                        <button class="btn btn-small" id="flashcardFlip" type="button">↻ Odwróć</button>
-                        <button class="btn btn-small" id="flashcardShuffle" type="button">Tasuj</button>
-                        <button class="btn btn-small" id="flashcardNext" type="button">Następna →</button>
+            </div>
+        </section>
+
+        <section id="kryptografia" class="section section-alt" aria-labelledby="kryptografia-tytul">
+            <div class="container">
+                <div class="crypto-intro reveal">
+                    <div>
+                        <span class="badge badge-mint">Kryptografia</span>
+                        <h2 id="kryptografia-tytul">Szyfry mają ponad 2000 lat</h2>
+                        <p class="section-desc">Kryptografia zajmuje się ukrywaniem treści wiadomości, od listów wojennych po dzisiejsze zakupy w internecie. Oto kilka ciekawych momentów z jej historii:</p>
+                    </div>
+                    <img src="images/szyfry.svg" alt="Szyfr Cezara" width="440" height="314" class="reveal" />
+                </div>
+                <div class="grid">
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">01</span>
+                        <h3>Szyfr Cezara</h3>
+                        <p>Juliusz Cezar przesuwał każdą literę o trzy miejsca w alfabecie: A zmienia się w D, B w E, a słowo ZASADA w CDVDGD. Dziś taki szyfr da się złamać w kilka minut, bo wystarczy sprawdzić wszystkie możliwe przesunięcia.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">02</span>
+                        <h3>Szyfr Vigenère’a</h3>
+                        <p>Przez ponad 300 lat uważano go za niemożliwy do złamania. Dopiero w 1863 roku Friedrich Kasiski opisał sposób na jego złamanie: wystarczyło znaleźć powtarzające się fragmenty zaszyfrowanego tekstu.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">03</span>
+                        <h3>Enigma i polscy matematycy</h3>
+                        <p>Marian Rejewski, Jerzy Różycki i Henryk Zygalski złamali szyfr niemieckiej maszyny Enigma w 1932 roku. W 1939 roku przekazali swoją wiedzę Francuzom i Brytyjczykom, co bardzo pomogło w późniejszych pracach w Bletchley Park.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card-num" aria-hidden="true">04</span>
+                        <h3>Maria Stuart i tajne listy</h3>
+                        <p>Szkocka królowa wysyłała zaszyfrowane listy do swoich zwolenników. Ludzie angielskiej królowej Elżbiety I złamali szyfr i odczytali je. Listy były ważnym dowodem w jej procesie, a w 1587 roku Maria została stracona.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="fiszki" class="section" aria-labelledby="fiszki-tytul">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="badge badge-red">Fiszki</span>
+                    <h2 id="fiszki-tytul">Fiszki: odwróć i sprawdź, co wiesz</h2>
+                    <p class="section-desc">Kliknij fiszkę, żeby zobaczyć odpowiedź. Kolejność jest losowa, a przyciskiem „Tasuj” możesz ją zmienić.</p>
+                </div>
+                <noscript><p class="info-box">Fiszki wymagają skryptów JavaScript.</p></noscript>
+                <div class="flashcard-box reveal">
+                    <div class="flashcard-stage">
+                        <button class="flashcard" id="flashcard" type="button" aria-label="Odwróć fiszkę, aby zobaczyć odpowiedź">
+                  <span class="flashcard-inner">
+                    <span class="flashcard-side front">
+                      <span class="flashcard-category" id="flashcardCategory">—</span>
+                      <span class="flashcard-question" id="flashcardQuestion">—</span>
+                      <span class="flashcard-hint" aria-hidden="true">Kliknij, aby odwrócić ↻</span>
+                    </span>
+                    <span class="flashcard-side back">
+                      <span class="flashcard-category">Odpowiedź</span>
+                      <span class="flashcard-answer" id="flashcardAnswer">—</span>
+                    </span>
+                  </span>
+                        </button>
+                    </div>
+                    <div class="flashcard-panel">
+                        <p class="flashcard-counter" id="flashcardCounter" aria-live="polite">Fiszka 1 z 12</p>
+                        <div class="flashcard-buttons">
+                            <button class="btn btn-small" id="flashcardPrev" type="button">← Poprzednia</button>
+                            <button class="btn btn-small" id="flashcardFlip" type="button">↻ Odwróć</button>
+                            <button class="btn btn-small" id="flashcardShuffle" type="button">Tasuj</button>
+                            <button class="btn btn-small" id="flashcardNext" type="button">Następna →</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="quiz" class="section section-alt" aria-labelledby="quiz-tytul">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="badge badge-hero">Quiz</span>
-                <h2 id="quiz-tytul">5 pytań, wynik na końcu</h2>
-                <p class="section-desc">Quiz losuje pięć pytań z puli dwunastu, więc każda próba wygląda trochę inaczej. Na końcu zobaczysz wynik i podsumowanie.</p>
-            </div>
-            <noscript><p class="info-box">Quiz wymaga włączonego JavaScriptu.</p></noscript>
-            <div class="quiz-panel reveal" id="quizPanel" aria-live="polite">
-                <div class="screen quiz-start">
-                    <h3>Sprawdź, co udało Ci się zapamiętać</h3>
-                    <p class="quiz-desc">Quiz ma pięć losowych pytań z puli dwunastu. Przy każdym wybierasz jedną odpowiedź, a na końcu zobaczysz wynik.</p>
-                    <button class="btn btn-big" id="quizStart" type="button">Zacznij quiz</button>
+        <section id="quiz" class="section section-alt" aria-labelledby="quiz-tytul">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="badge badge-hero">Quiz</span>
+                    <h2 id="quiz-tytul">5 pytań, wynik na końcu</h2>
+                    <p class="section-desc">Quiz losuje pięć pytań z puli dwunastu, więc każda próba wygląda trochę inaczej. Na końcu zobaczysz wynik i podsumowanie.</p>
+                </div>
+                <noscript><p class="info-box">Quiz wymaga włączonego JavaScriptu.</p></noscript>
+                <div class="quiz-panel reveal" id="quizPanel" aria-live="polite">
+                    <div class="screen quiz-start">
+                        <h3>Sprawdź, co udało Ci się zapamiętać</h3>
+                        <p class="quiz-desc">Quiz ma pięć losowych pytań z puli dwunastu. Przy każdym wybierasz jedną odpowiedź, a na końcu zobaczysz wynik.</p>
+                        <button class="btn btn-big" id="quizStart" type="button">Zacznij quiz</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="faq" class="section" aria-labelledby="faq-tytul">
-        <div class="container container-narrow">
-            <div class="section-head reveal">
-                <span class="badge badge-amber">FAQ</span>
-                <h2 id="faq-tytul">Pytania, które zadaje każdy początkujący</h2>
+        <section id="faq" class="section" aria-labelledby="faq-tytul">
+            <div class="container container-narrow">
+                <div class="section-head reveal">
+                    <span class="badge badge-amber">FAQ</span>
+                    <h2 id="faq-tytul">Pytania, które zadaje każdy początkujący</h2>
+                </div>
+                <div class="accordion reveal">
+                    <details class="faq-item" open>
+                        <summary>Czy kłódka przy adresie strony oznacza, że mogę jej ufać?</summary>
+                        <div class="faq-content"><p>Nie zawsze. Kłódka oznacza tylko, że połączenie ze stroną jest szyfrowane (HTTPS), więc nikt po drodze nie podejrzy przesyłanych danych. Nie mówi nic o uczciwości strony, bo fałszywe strony też mogą mieć kłódkę. Zawsze sprawdzaj dokładnie adres.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jak wymyślić mocne hasło, które zapamiętam?</summary>
+                        <div class="faq-content"><p>Połącz cztery lub pięć zwykłych słów, np. „kot-rower-zupa-lampa-dom”. Im dłuższe hasło, tym lepiej. Najlepiej korzystać z menedżera haseł, który tworzy i przechowuje hasła za ciebie. Wtedy pamiętasz tylko jedno hasło główne.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Którą metodę 2FA wybrać?</summary>
+                        <div class="faq-content"><p>Od najbezpieczniejszej: klucz sprzętowy, potem aplikacja z kodami, a na końcu SMS. SMS jest lepszy niż nic, ale można go przechwycić, jeśli ktoś przejmie twój numer telefonu. Warto też zapisać kody awaryjne w bezpiecznym miejscu.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Kliknąłem w podejrzany link. Co teraz?</summary>
+                        <div class="faq-content"><p>Nie podawaj żadnych danych i zamknij stronę. Jeśli już coś wpisałeś, od razu zmień hasło i włącz 2FA. Jeśli podałeś dane karty, skontaktuj się z bankiem. Podejrzaną wiadomość możesz zgłosić do CERT Polska.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Czy publiczne Wi-Fi jest niebezpieczne?</summary>
+                        <div class="faq-content"><p>W otwartej sieci ktoś może podsłuchiwać ruch albo podsyłać fałszywe strony. Korzystaj ze stron z HTTPS, nie loguj się do banku i nie rób płatności. Jeśli musisz, użyj sieci komórkowej w telefonie albo zaufanego VPN.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Czym różni się deep web od dark webu?</summary>
+                        <div class="faq-content"><p>Deep web to wszystko, czego nie znajdziesz w wyszukiwarce, np. twoja poczta czy konto bankowe. Dark web to niewielka część internetu dostępna przez specjalne programy, takie jak Tor. Zwykle korzystasz z deep webu codziennie, nawet o tym nie wiedząc.</p></div>
+                    </details>
+                </div>
             </div>
-            <div class="accordion reveal">
-                <details class="faq-item" open>
-                    <summary>Czy kłódka przy adresie strony oznacza, że mogę jej ufać?</summary>
-                    <div class="faq-content"><p>Nie zawsze. Kłódka oznacza tylko, że połączenie ze stroną jest szyfrowane (HTTPS), więc nikt po drodze nie podejrzy przesyłanych danych. Nie mówi nic o uczciwości strony, bo fałszywe strony też mogą mieć kłódkę. Zawsze sprawdzaj dokładnie adres.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Jak wymyślić mocne hasło, które zapamiętam?</summary>
-                    <div class="faq-content"><p>Połącz cztery lub pięć zwykłych słów, np. „kot-rower-zupa-lampa-dom”. Im dłuższe hasło, tym lepiej. Najlepiej korzystać z menedżera haseł, który tworzy i przechowuje hasła za ciebie. Wtedy pamiętasz tylko jedno hasło główne.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Którą metodę 2FA wybrać?</summary>
-                    <div class="faq-content"><p>Od najbezpieczniejszej: klucz sprzętowy, potem aplikacja z kodami, a na końcu SMS. SMS jest lepszy niż nic, ale można go przechwycić, jeśli ktoś przejmie twój numer telefonu. Warto też zapisać kody awaryjne w bezpiecznym miejscu.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Kliknąłem w podejrzany link. Co teraz?</summary>
-                    <div class="faq-content"><p>Nie podawaj żadnych danych i zamknij stronę. Jeśli już coś wpisałeś, od razu zmień hasło i włącz 2FA. Jeśli podałeś dane karty, skontaktuj się z bankiem. Podejrzaną wiadomość możesz zgłosić do CERT Polska.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Czy publiczne Wi-Fi jest niebezpieczne?</summary>
-                    <div class="faq-content"><p>W otwartej sieci ktoś może podsłuchiwać ruch albo podsyłać fałszywe strony. Korzystaj ze stron z HTTPS, nie loguj się do banku i nie rób płatności. Jeśli musisz, użyj sieci komórkowej w telefonie albo zaufanego VPN.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Czym różni się deep web od dark webu?</summary>
-                    <div class="faq-content"><p>Deep web to wszystko, czego nie znajdziesz w wyszukiwarce, np. twoja poczta czy konto bankowe. Dark web to niewielka część internetu dostępna przez specjalne programy, takie jak Tor. Zwykle korzystasz z deep webu codziennie, nawet o tym nie wiedząc.</p></div>
-                </details>
+        </section>
+    </main>
+
+    <footer id="stopka" class="footer">
+        <div class="container">
+            <h2 class="sr-only">Informacje o projekcie i przydatne linki</h2>
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">CyberCiekawostki</h3>
+                    <p class="footer-desc">Strona o cyberbezpieczeństwie i kryptografii. Treści mają charakter edukacyjny i nie zastępują profesjonalnej porady dotyczącej bezpieczeństwa.</p>
+                </div>
+                <nav aria-label="Nawigacja w stopce">
+                    <h3 class="footer-title">Sekcje</h3>
+                    <ul class="footer-list">
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#ciekawostki">Ciekawostki</a></li>
+                        <li><a href="#kryptografia">Kryptografia</a></li>
+                        <li><a href="#fiszki">Fiszki</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h3 class="footer-title">Nauka</h3>
+                    <ul class="footer-list">
+                        <li><a href="https://www.cert.pl/" target="_blank" rel="noopener noreferrer">CERT Polska ↗</a></li>
+                        <li><a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Have I Been Pwned ↗</a></li>
+                        <li><a href="https://pl.wikipedia.org/wiki/Kryptografia" target="_blank" rel="noopener noreferrer">Wikipedia: kryptografia ↗</a></li>
+                        <li><a href="https://www.cloudflare.com/pl-pl/learning/" target="_blank" rel="noopener noreferrer">Cloudflare Learning ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="year">2026</span> CyberCiekawostki</p>
+                <p>Kacper Kowalski</p>
             </div>
         </div>
-    </section>
-</main>
-
+    </footer>
 
     <button class="to-top" id="toTop" type="button" aria-label="Wróć na górę strony">↑</button>
 </body>
