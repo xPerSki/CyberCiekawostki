@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" role="img" aria-label="Ilustracja: tarcza z kłódką na tle bąbelków i gwiazdek">
+  <title>Tarcza z kłódką</title>
+  <circle cx="210" cy="215" r="172" fill="#FFE9E6" />
+  <circle cx="210" cy="215" r="172" fill="none" stroke="#FFC9C8" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round" />
+  <path d="M96 118 L100 128 L110 132 L100 136 L96 146 L92 136 L82 132 L92 128 Z" fill="#29ABB7" />
+  <path d="M330 84 L335 96 L347 101 L335 106 L330 118 L325 106 L313 101 L325 96 Z" fill="#FFC94D" />
+  <path d="M340 300 L344 310 L354 314 L344 318 L340 328 L336 318 L326 314 L336 310 Z" fill="#FF8B89" />
+  <path d="M72 296 L75 304 L83 307 L75 310 L72 318 L69 310 L61 307 L69 304 Z" fill="#FFFFFF" />
+  <g font-family="Nunito, Arial, sans-serif" font-weight="700">
+    <rect x="238" y="58" width="140" height="46" rx="23" fill="#FFFFFF" stroke="#FF5E5B" stroke-width="3" />
+    <text x="308" y="88" text-anchor="middle" font-size="20" fill="#C13337">+3 → A⇢D</text>
+    <path d="M252 104 L246 120 L268 106 Z" fill="#FFFFFF" stroke="#FF5E5B" stroke-width="3" />
+    <rect x="30" y="196" width="112" height="42" rx="21" fill="#FFFFFF" stroke="#29ABB7" stroke-width="3" />
+    <text x="86" y="224" text-anchor="middle" font-size="18" fill="#1E7C82">01001101</text>
+    <rect x="286" y="336" width="108" height="42" rx="21" fill="#FFFFFF" stroke="#FFC94D" stroke-width="3" />
+    <text x="340" y="364" text-anchor="middle" font-size="18" fill="#8A6A12">HTTPS</text>
+  </g>
+  <path d="M210 112 L302 146 V228 C302 292 260 328 210 348 C160 328 118 292 118 228 V146 Z" fill="#FF5E5B" />
+  <path d="M210 130 L286 158 V228 C286 280 253 310 210 328 C167 310 134 280 134 228 V158 Z" fill="#FF8B89" />
+  <path d="M186 208 v-26 a24 24 0 0 1 48 0 v26" fill="none" stroke="#3B2B2E" stroke-width="10" stroke-linecap="round" />
+  <rect x="168" y="206" width="84" height="64" rx="14" fill="#FFD166" />
+  <circle cx="210" cy="230" r="9" fill="#3B2B2E" />
+  <rect x="206" y="232" width="8" height="16" rx="4" fill="#3B2B2E" />
+  <g fill="none" stroke="#29ABB7" stroke-width="6" stroke-linecap="round">
+    <path d="M138 84 a26 26 0 0 1 36 0" />
+    <path d="M128 68 a40 40 0 0 1 56 0" />
+  </g>
+  <circle cx="156" cy="98" r="5" fill="#29ABB7" />
+  <ellipse cx="210" cy="392" rx="96" ry="12" fill="#F3D9D4" />
+</svg>
