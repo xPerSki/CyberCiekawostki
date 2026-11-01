@@ -1122,12 +1122,17 @@ html[data-theme="dark"] .icon-sun { display: none; }
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateY(22px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.visible {
+html.js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+}
+
+html.js .reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1143,7 +1148,9 @@ html[data-theme="dark"] .icon-sun { display: none; }
         transition-duration: 0.01ms !important;
     }
 
-    .reveal {
+    .reveal,
+    html.js .reveal,
+    html.js .reveal.visible {
         opacity: 1;
         transform: none;
     }
